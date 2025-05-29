@@ -1,7 +1,51 @@
 [project]
-name = "pdf-manager"
+name = "pdf-manager-service"
 version = "0.1.0"
-description = "Add your description here"
+description = "A modular and extensible service for managing PDF files — detect if content is primarily text or images, extract text, and analyze structure. Designed to meet specific project needs but flexible enough to serve as a foundation for scalable PDF processing workflows."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "pdfminer-six>=20250506",
+    "pymupdf>=1.26.0",
+]
+
+[dependency-groups]
+dev = [
+    "notebook>=7.4.3",
+    "pytest>=8.3.5",
+    "ruff>=0.11.11",
+    "taskipy>=1.14.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "-p no:warnings"
+
+[tool.ruff]
+line-length = 79
+extend-exclude = ["migrations"]
+
+[tool.ruff.lint]
+preview = true
+select = ["F", "E", "W", "I", "PL", "PT"]
+
+[tool.ruff.format]
+preview = true
+
+# Windows
+[tool.taskipy.tasks]
+run = "uv run fastapi dev app/main.py"
+pre_test = "uv run task lint"
+test = "uv run pytest --cov=app --verbose"
+post_test = "uv run coverage html"
+lint = "uv run ruff check . && uv run ruff check . --diff"
+format = "uv run ruff check . --fix && uv run ruff format ."
+
+# Linux
+# [tool.taskipy.tasks]
+# run = "uv run fastapi dev app/main.py"
+# pre_test = "uv run task lint"
+# test = "uv run pytest --cov=app --verbose"
+# post_test = "uv run coverage html"
+# lint = "uv run ruff check . && uv run ruff check . --diff"
+# format = "uv run check . --fix ; uv run ruff format ."
