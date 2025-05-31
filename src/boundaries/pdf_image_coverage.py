@@ -52,7 +52,11 @@ class PDFImageCoverage:
 
         except Exception as e:
             logger.error(f"Erro ao calcular cobertura de imagens: {e}")
-            raise PDFAnalysisException(f"Falha no cálculo de cobertura de imagens: {e}")
+            raise PDFAnalysisException(
+                message="Erro ao calcular cobertura de imagens",
+                original_exception=e,
+                file_path=page.parent.name,
+            )
 
     def _calculate_single_image_area(
         self, page: fitz.Page, img: tuple, page_area: float

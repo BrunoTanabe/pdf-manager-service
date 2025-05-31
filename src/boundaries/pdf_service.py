@@ -89,7 +89,11 @@ class PDFService:
 
         except Exception as e:
             logger.error(f"Erro na análise do PDF {pdf_file}: {e}")
-            raise PDFAnalysisException(f"Falha na análise do PDF: {e}")
+            raise PDFAnalysisException(
+                "Falha na análise do PDF.",
+                original_exception=e,
+                file_path=pdf_file,
+            )
 
     def extract_pdf_text(self, pdf_file: str) -> str:
         """

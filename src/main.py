@@ -44,9 +44,22 @@ if __name__ == "__main__":
         text = pdf_service.extract_pdf_text(pdf_file)
         print(f"Texto extraído: {len(text)} caracteres")
 
-    except (
-        PDFAnalysisException,
-        PDFExtractionException,
-        FileNotFoundError,
-    ) as e:
-        print(f"Erro: {e}")
+    except FileNotFoundError as e:
+        logging.error(f"Arquivo não encontrado: {e}")
+        print("ERRO: Não foi possível encontrar o arquivo PDF. Verifique o caminho.")
+
+    except PDFAnalysisException as e:
+        logging.error(f"Erro na análise do PDF: {e}")
+        print(f"ERRO na análise do PDF: {e}")
+        if e.original_exception:
+            logging.debug(f"Exceção original: {e.original_exception}")
+
+    except PDFExtractionException as e:
+        logging.error(f"Erro na extração de texto: {e}")
+        print(f"ERRO na extração de texto do PDF: {e}")
+        if e.original_exception:
+            logging.debug(f"Exceção original: {e.original_exception}")
+
+    except Exception as e:
+        logging.error(f"Erro não esperado: {e}")
+        print(f"ERRO inesperado ao processar o PDF: {e}")
