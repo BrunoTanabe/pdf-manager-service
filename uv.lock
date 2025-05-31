@@ -1035,7 +1035,7 @@ wheels = [
 ]
 
 [[package]]
-name = "pdf-manager"
+name = "pdf-manager-service"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

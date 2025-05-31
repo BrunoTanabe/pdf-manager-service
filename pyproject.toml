@@ -21,31 +21,12 @@ dev = [
 pythonpath = "."
 addopts = "-p no:warnings"
 
-[tool.ruff]
-line-length = 79
-extend-exclude = ["migrations"]
-
-[tool.ruff.lint]
-preview = true
-select = ["F", "E", "W", "I", "PL", "PT"]
-
-[tool.ruff.format]
-preview = true
-
-# Windows
 [tool.taskipy.tasks]
 run = "uv run fastapi dev app/main.py"
 pre_test = "uv run task lint"
 test = "uv run pytest --cov=app --verbose"
 post_test = "uv run coverage html"
-lint = "uv run ruff check . && uv run ruff check . --diff"
-format = "uv run ruff check . --fix && uv run ruff format ."
-
-# Linux
-# [tool.taskipy.tasks]
-# run = "uv run fastapi dev app/main.py"
-# pre_test = "uv run task lint"
-# test = "uv run pytest --cov=app --verbose"
-# post_test = "uv run coverage html"
-# lint = "uv run ruff check . && uv run ruff check . --diff"
-# format = "uv run check . --fix ; uv run ruff format ."
+lint = "uv run ruff check ."
+post_lint = "uv run ruff check . --diff"
+format = "uv run ruff check . --fix"
+post_format = "uv run ruff format ."

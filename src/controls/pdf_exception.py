@@ -1,13 +1,10 @@
 class PDFAnalysisException(Exception):
-    """Exceção customizada para erros de análise de PDF"""
+    """Exceção customizada para erros na análise de PDF."""
+
     pass
 
 
-class PDFExtractException(Exception):
-    """Exceção customizada para erros de extração de PDF"""
-    pass
+class PDFExtractionException(Exception):
+    """Exceção customizada para erros na extração de texto."""
 
-
-class PDFFileException(Exception):
-    """Exceção customizada para erros de arquivo PDF"""
     pass
