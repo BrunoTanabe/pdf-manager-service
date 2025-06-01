@@ -1,0 +1,8 @@
+# Dependências principais
+-r requirements.txt
+
+# Dependências de desenvolvimento
+notebook>=7.4.3
+pytest>=8.3.5
+ruff>=0.11.11
+taskipy>=1.14.1 
