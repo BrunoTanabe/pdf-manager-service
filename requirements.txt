@@ -1,0 +1,3 @@
+# Dependências principais
+pdfminer-six>=20250506
+pymupdf>=1.26.0 
