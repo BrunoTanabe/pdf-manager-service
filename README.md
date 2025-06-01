@@ -20,11 +20,10 @@ Simplify and automate PDF document processing with intelligence and modularity! 
   [8. How to Run? 🏃‍♂️](#8-how-to-run-️)  
   [9. Usage Examples 💡](#9-usage-examples-)  
   [10. Configuration 🔧](#10-configuration-)  
-  [11. Testing 🧪](#11-testing-)  
-  [12. TODOs 🔮](#12-todos-)  
-  [13. License 📄](#13-license-)  
-  [14. How to Contribute? 🤝](#14-how-to-contribute-)  
-  [15. Author and Contact 👤](#15-author-and-contact-)  
+  [11. TODOs 🔮](#11-todos-)  
+  [12. License 📄](#12-license-)  
+  [13. How to Contribute? 🤝](#13-how-to-contribute-)  
+  [14. Author and Contact 👤](#14-author-and-contact-)  
 
 ---
 
@@ -61,7 +60,6 @@ Welcome to the **PDF Manager Service**! This is a modular and extensible service
 - **Language**: Python 3.10+
 - **PDF Processing**: PyMuPDF (Fitz) and pdfminer-six
 - **Dependency Management**: uv (Astral)
-- **Testing**: pytest
 - **Formatting and Linting**: Ruff
 - **Task Automation**: Taskipy
 
@@ -75,7 +73,7 @@ The project structure follows a well-defined modular architecture:
 pdf-manager-service/
 │
 ├── .venv/              # Python virtual environment
-├── data/               # Data and test files
+├── data/               # Data and example files
 ├── notebook/           # Jupyter notebooks for analysis
 ├── src/                # Main source code
 │   ├── boundaries/     # Interface/services layer
@@ -175,9 +173,6 @@ uv run python src/main.py
 #### 8.1.3. Useful Commands with uv
 
 ```bash
-# Run tests
-uv run task test
-
 # Check formatting
 uv run task lint
 
@@ -217,7 +212,7 @@ pip install -r requirements-dev.txt
 pip install pdfminer-six>=20250506 pymupdf>=1.26.0
 
 # Option 4: Install manually with development dependencies
-pip install pdfminer-six>=20250506 pymupdf>=1.26.0 notebook>=7.4.3 pytest>=8.3.5 ruff>=0.11.11 taskipy>=1.14.1
+pip install pdfminer-six>=20250506 pymupdf>=1.26.0 notebook>=7.4.3 ruff>=0.11.11 taskipy>=1.14.1
 ```
 
 #### 8.2.3. Running
@@ -225,9 +220,6 @@ pip install pdfminer-six>=20250506 pymupdf>=1.26.0 notebook>=7.4.3 pytest>=8.3.5
 ```bash
 # Run example
 python src/main.py
-
-# Run tests
-pytest
 
 # Check formatting
 ruff check .
@@ -267,9 +259,6 @@ poetry run python src/main.py
 #### 8.3.3. Useful Commands with Poetry
 
 ```bash
-# Run tests
-poetry run pytest
-
 # Check formatting
 poetry run ruff check .
 
@@ -296,7 +285,7 @@ cd pdf-manager-service
 pipenv install pdfminer-six>=20250506 pymupdf>=1.26.0
 
 # Install development dependencies
-pipenv install --dev notebook>=7.4.3 pytest>=8.3.5 ruff>=0.11.11 taskipy>=1.14.1
+pipenv install --dev notebook>=7.4.3 ruff>=0.11.11 taskipy>=1.14.1
 
 # Activate virtual environment
 pipenv shell
@@ -308,9 +297,6 @@ pipenv run python src/main.py
 #### 8.4.3. Useful Commands with Pipenv
 
 ```bash
-# Run tests
-pipenv run pytest
-
 # Check formatting
 pipenv run ruff check .
 
@@ -324,7 +310,6 @@ pipenv graph
 |--------|----|-----------| -------|--------|
 | **Install deps** | `uv sync` | `pip install -r requirements.txt` | `poetry install` | `pipenv install` |
 | **Run example** | `uv run python src/main.py` | `python src/main.py` | `poetry run python src/main.py` | `pipenv run python src/main.py` |
-| **Run tests** | `uv run task test` | `pytest` | `poetry run pytest` | `pipenv run pytest` |
 | **Check code** | `uv run task lint` | `ruff check .` | `poetry run ruff check .` | `pipenv run ruff check .` |
 
 ---
@@ -399,26 +384,7 @@ class PDFConfig:
 
 ---
 
-## 11. Testing 🧪
-
-The project includes automated tests with pytest:
-
-```bash
-# Run all tests with coverage
-uv run task test
-
-# Run specific tests
-uv run pytest tests/test_pdf_service.py
-
-# Generate HTML coverage report
-uv run task post_test
-```
-
-Coverage reports are generated in the `htmlcov/` folder.
-
----
-
-## 12. TODOs 🔮
+## 11. TODOs 🔮
 
 - **REST API**: Create a REST API with FastAPI for HTTP access ⚡
 - **Web Interface**: Develop a web interface for PDF upload and analysis 🌐
@@ -431,13 +397,13 @@ Coverage reports are generated in the `htmlcov/` folder.
 
 ---
 
-## 13. License 📄
+## 12. License 📄
 
 This project is licensed under the MIT License. For more information, read the [LICENSE](LICENSE) file.
 
 ---
 
-## 14. How to Contribute? 🤝
+## 13. How to Contribute? 🤝
 
 Contributions are very welcome! Follow the steps below:
 
@@ -450,9 +416,8 @@ Contributions are very welcome! Follow the steps below:
    ```bash
    uv sync
    ```
-4. Make your changes and test:
+4. Make your changes and check formatting:
    ```bash
-   uv run task test
    uv run task lint
    ```
 5. Commit your changes:
@@ -467,7 +432,7 @@ Contributions are very welcome! Follow the steps below:
 
 ---
 
-## 15. Author and Contact 👤
+## 14. Author and Contact 👤
 
 - **Name**: Bruno Tanabe
 - **Email**: [tanabebruno@gmail.com](mailto:tanabebruno@gmail.com)

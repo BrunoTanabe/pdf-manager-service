@@ -12,20 +12,12 @@ dependencies = [
 [dependency-groups]
 dev = [
     "notebook>=7.4.3",
-    "pytest>=8.3.5",
     "ruff>=0.11.11",
     "taskipy>=1.14.1",
 ]
 
-[tool.pytest.ini_options]
-pythonpath = "."
-addopts = "-p no:warnings"
-
 [tool.taskipy.tasks]
 run = "uv run fastapi dev app/main.py"
-pre_test = "uv run task lint"
-test = "uv run pytest --cov=app --verbose"
-post_test = "uv run coverage html"
 lint = "uv run ruff check ."
 post_lint = "uv run ruff check . --diff"
 format = "uv run ruff check . --fix"

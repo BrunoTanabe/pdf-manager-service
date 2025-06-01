@@ -20,11 +20,10 @@ Simplifique e automatize o processamento de documentos PDF com inteligência e m
   [8. Como Executar? 🏃‍♂️](#8-como-executar-️)  
   [9. Exemplos de Uso 💡](#9-exemplos-de-uso-)  
   [10. Configurações 🔧](#10-configurações-)  
-  [11. Testes 🧪](#11-testes-)  
-  [12. TODOs 🔮](#12-todos-)  
-  [13. Licença 📄](#13-licença-)  
-  [14. Como Contribuir? 🤝](#14-como-contribuir-)  
-  [15. Autor e Contato 👤](#15-autor-e-contato-)  
+  [11. TODOs 🔮](#11-todos-)  
+  [12. Licença 📄](#12-licença-)  
+  [13. Como Contribuir? 🤝](#13-como-contribuir-)  
+  [14. Autor e Contato 👤](#14-autor-e-contato-)  
 
 ---
 
@@ -61,7 +60,6 @@ Bem-vindo ao **PDF Manager Service**! Este é um serviço modular e extensível 
 - **Linguagem**: Python 3.10+
 - **Processamento de PDF**: PyMuPDF (Fitz) e pdfminer-six
 - **Gerenciamento de Dependências**: uv (Astral)
-- **Testes**: pytest
 - **Formatação e Linting**: Ruff
 - **Automação de Tarefas**: Taskipy
 
@@ -75,7 +73,7 @@ A estrutura do projeto segue uma arquitetura modular bem definida:
 pdf-manager-service/
 │
 ├── .venv/              # Ambiente virtual Python
-├── data/               # Dados e arquivos de teste
+├── data/               # Dados e arquivos de exemplo
 ├── notebook/           # Jupyter notebooks para análises
 ├── src/                # Código-fonte principal
 │   ├── boundaries/     # Camada de interface/serviços
@@ -175,9 +173,6 @@ uv run python src/main.py
 #### 8.1.3. Comandos Úteis com uv
 
 ```bash
-# Executar testes
-uv run task test
-
 # Verificar formatação
 uv run task lint
 
@@ -217,7 +212,7 @@ pip install -r requirements-dev.txt
 pip install pdfminer-six>=20250506 pymupdf>=1.26.0
 
 # Opção 4: Instalar manualmente com dependências de desenvolvimento
-pip install pdfminer-six>=20250506 pymupdf>=1.26.0 notebook>=7.4.3 pytest>=8.3.5 ruff>=0.11.11 taskipy>=1.14.1
+pip install pdfminer-six>=20250506 pymupdf>=1.26.0 notebook>=7.4.3 ruff>=0.11.11 taskipy>=1.14.1
 ```
 
 #### 8.2.3. Executando
@@ -225,9 +220,6 @@ pip install pdfminer-six>=20250506 pymupdf>=1.26.0 notebook>=7.4.3 pytest>=8.3.5
 ```bash
 # Executar exemplo
 python src/main.py
-
-# Executar testes
-pytest
 
 # Verificar formatação
 ruff check .
@@ -267,9 +259,6 @@ poetry run python src/main.py
 #### 8.3.3. Comandos Úteis com Poetry
 
 ```bash
-# Executar testes
-poetry run pytest
-
 # Verificar formatação
 poetry run ruff check .
 
@@ -296,7 +285,7 @@ cd pdf-manager-service
 pipenv install pdfminer-six>=20250506 pymupdf>=1.26.0
 
 # Instalar dependências de desenvolvimento
-pipenv install --dev notebook>=7.4.3 pytest>=8.3.5 ruff>=0.11.11 taskipy>=1.14.1
+pipenv install --dev notebook>=7.4.3 ruff>=0.11.11 taskipy>=1.14.1
 
 # Ativar ambiente virtual
 pipenv shell
@@ -308,9 +297,6 @@ pipenv run python src/main.py
 #### 8.4.3. Comandos Úteis com Pipenv
 
 ```bash
-# Executar testes
-pipenv run pytest
-
 # Verificar formatação
 pipenv run ruff check .
 
@@ -324,7 +310,6 @@ pipenv graph
 |------|----|-----------| -------|--------|
 | **Instalar deps** | `uv sync` | `pip install -r requirements.txt` | `poetry install` | `pipenv install` |
 | **Executar exemplo** | `uv run python src/main.py` | `python src/main.py` | `poetry run python src/main.py` | `pipenv run python src/main.py` |
-| **Executar testes** | `uv run task test` | `pytest` | `poetry run pytest` | `pipenv run pytest` |
 | **Verificar código** | `uv run task lint` | `ruff check .` | `poetry run ruff check .` | `pipenv run ruff check .` |
 
 ---
@@ -399,26 +384,7 @@ class PDFConfig:
 
 ---
 
-## 11. Testes 🧪
-
-O projeto inclui testes automatizados com pytest:
-
-```bash
-# Executar todos os testes com coverage
-uv run task test
-
-# Executar testes específicos
-uv run pytest tests/test_pdf_service.py
-
-# Gerar relatório de coverage em HTML
-uv run task post_test
-```
-
-Os relatórios de coverage são gerados na pasta `htmlcov/`.
-
----
-
-## 12. TODOs 🔮
+## 11. TODOs 🔮
 
 - **API REST**: Criar uma API REST com FastAPI para acesso via HTTP ⚡
 - **Interface Web**: Desenvolver uma interface web para upload e análise de PDFs 🌐
@@ -431,13 +397,13 @@ Os relatórios de coverage são gerados na pasta `htmlcov/`.
 
 ---
 
-## 13. Licença 📄
+## 12. Licença 📄
 
 Este projeto está licenciado sob a Licença MIT. Para mais informações, leia o arquivo [LICENSE](LICENSE).
 
 ---
 
-## 14. Como Contribuir? 🤝
+## 13. Como Contribuir? 🤝
 
 Contribuições são muito bem-vindas! Siga os passos abaixo:
 
@@ -450,9 +416,8 @@ Contribuições são muito bem-vindas! Siga os passos abaixo:
    ```bash
    uv sync
    ```
-4. Faça suas alterações e teste:
+4. Faça suas alterações e verifique a formatação:
    ```bash
-   uv run task test
    uv run task lint
    ```
 5. Faça o commit das alterações:
@@ -467,7 +432,7 @@ Contribuições são muito bem-vindas! Siga os passos abaixo:
 
 ---
 
-## 15. Autor e Contato 👤
+## 14. Autor e Contato 👤
 
 - **Nome**: Bruno Tanabe
 - **Email**: [tanabebruno@gmail.com](mailto:tanabebruno@gmail.com)
