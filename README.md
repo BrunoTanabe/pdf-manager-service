@@ -1,88 +1,90 @@
 # PDF Manager Service 📄🔍
 
-Simplifique e automatize o processamento de documentos PDF com inteligência e modularidade! 🚀 O **PDF Manager Service** é um serviço extensível desenvolvido em Python que oferece detecção automática de tipos de conteúdo, extração inteligente de texto e análise estrutural completa de arquivos PDF. Com uma arquitetura modular bem definida e configurações personalizáveis, esta solução foi criada para atender necessidades específicas de um projeto, mas é flexível o suficiente para servir como base para fluxos de trabalho escaláveis de processamento de PDFs.
+##### 🇧🇷 [LEIA ESTE README EM PORTUGUÊS!](README_PTBR.md)
+
+Simplify and automate PDF document processing with intelligence and modularity! 🚀 The **PDF Manager Service** is an extensible service developed in Python that offers automatic content type detection, intelligent text extraction, and comprehensive structural analysis of PDF files. With a well-defined modular architecture and customizable configurations, this solution was created to meet specific project needs, but is flexible enough to serve as a foundation for scalable PDF processing workflows.
 
 ---
 
-## Sumário 📋
+## Table of Contents 📋
 
 [PDF Manager Service 📄🔍](#pdf-manager-service-)  
-  [Sumário 📋](#sumário-)  
-  [1. Descrição 📖](#1-descrição-)  
-  [2. Objetivos 🎯](#2-objetivos-)  
-  [3. Principais Funcionalidades ⚙️](#3-principais-funcionalidades-️)  
-  [4. Principais Tecnologias Utilizadas 💻](#4-principais-tecnologias-utilizadas-)  
-  [5. Estrutura do Projeto 📁](#5-estrutura-do-projeto-)  
-  [6. Arquitetura 🏗️](#6-arquitetura-️)  
-  [7. Requisitos 🔧](#7-requisitos-)  
-  [8. Como Executar? 🏃‍♂️](#8-como-executar-️)  
-  [9. Exemplos de Uso 💡](#9-exemplos-de-uso-)  
-  [10. Configurações 🔧](#10-configurações-)  
-  [11. Testes 🧪](#11-testes-)  
+  [Table of Contents 📋](#table-of-contents-)  
+  [1. Description 📖](#1-description-)  
+  [2. Objectives 🎯](#2-objectives-)  
+  [3. Main Features ⚙️](#3-main-features-️)  
+  [4. Main Technologies Used 💻](#4-main-technologies-used-)  
+  [5. Project Structure 📁](#5-project-structure-)  
+  [6. Architecture 🏗️](#6-architecture-️)  
+  [7. Requirements 🔧](#7-requirements-)  
+  [8. How to Run? 🏃‍♂️](#8-how-to-run-️)  
+  [9. Usage Examples 💡](#9-usage-examples-)  
+  [10. Configuration 🔧](#10-configuration-)  
+  [11. Testing 🧪](#11-testing-)  
   [12. TODOs 🔮](#12-todos-)  
-  [13. Licença 📄](#13-licença-)  
-  [14. Como Contribuir? 🤝](#14-como-contribuir-)  
-  [15. Autor e Contato 👤](#15-autor-e-contato-)  
+  [13. License 📄](#13-license-)  
+  [14. How to Contribute? 🤝](#14-how-to-contribute-)  
+  [15. Author and Contact 👤](#15-author-and-contact-)  
 
 ---
 
-## 1. Descrição 📖
+## 1. Description 📖
 
-Bem-vindo ao **PDF Manager Service**! Este é um serviço modular e extensível desenvolvido em Python para gerenciamento inteligente de arquivos PDF. O sistema oferece funcionalidades avançadas para detectar automaticamente se o conteúdo de um PDF é principalmente texto ou imagens, extrair texto de forma eficiente e realizar análises estruturais detalhadas página por página. Com uma arquitetura bem definida e configurações personalizáveis, o serviço é ideal tanto para necessidades específicas quanto para servir como fundação para workflows escaláveis de processamento de documentos.
-
----
-
-## 2. Objetivos 🎯
-
-- **Detecção Automática**: Identificar automaticamente se o conteúdo do PDF é principalmente texto ou imagens.
-- **Extração Inteligente**: Extrair texto de PDFs de forma eficiente e precisa.
-- **Análise Estrutural**: Fornecer análises detalhadas da estrutura do documento página por página.
-- **Modularidade**: Oferecer uma arquitetura flexível e extensível para diferentes necessidades.
-- **Configurabilidade**: Permitir personalização de parâmetros de análise conforme requisitos específicos.
+Welcome to the **PDF Manager Service**! This is a modular and extensible service developed in Python for intelligent PDF file management. The system offers advanced features to automatically detect whether PDF content is primarily text or images, extract text efficiently, and perform detailed structural analysis page by page. With a well-defined architecture and customizable configurations, the service is ideal both for specific needs and to serve as a foundation for scalable document processing workflows.
 
 ---
 
-## 3. Principais Funcionalidades ⚙️
+## 2. Objectives 🎯
 
-- **Detecção de Tipo de PDF**: Classifica automaticamente PDFs como TEXT, IMAGE ou UNKNOWN.
-- **Análise Página por Página**: Analisa cada página individualmente para detectar conteúdo e estrutura.
-- **Extração de Texto**: Extrai texto completo de documentos PDF com alta precisão.
-- **Análise de Cobertura de Imagens**: Calcula a cobertura de imagens em cada página.
-- **Configurações Personalizáveis**: Permite ajustar thresholds e parâmetros de análise.
-- **Tratamento de Exceções**: Sistema robusto de tratamento de erros específicos para PDFs.
-- **Logging Integrado**: Sistema de logging configurável para monitoramento e debug.
+- **Automatic Detection**: Automatically identify whether PDF content is primarily text or images.
+- **Intelligent Extraction**: Extract text from PDFs efficiently and accurately.
+- **Structural Analysis**: Provide detailed analysis of document structure page by page.
+- **Modularity**: Offer a flexible and extensible architecture for different needs.
+- **Configurability**: Allow customization of analysis parameters according to specific requirements.
 
 ---
 
-## 4. Principais Tecnologias Utilizadas 💻
+## 3. Main Features ⚙️
 
-- **Linguagem**: Python 3.10+
-- **Processamento de PDF**: PyMuPDF (Fitz) e pdfminer-six
-- **Gerenciamento de Dependências**: uv (Astral)
-- **Testes**: pytest
-- **Formatação e Linting**: Ruff
-- **Automação de Tarefas**: Taskipy
+- **PDF Type Detection**: Automatically classifies PDFs as TEXT, IMAGE, or UNKNOWN.
+- **Page-by-Page Analysis**: Analyzes each page individually to detect content and structure.
+- **Text Extraction**: Extracts complete text from PDF documents with high precision.
+- **Image Coverage Analysis**: Calculates image coverage on each page.
+- **Customizable Settings**: Allows adjustment of thresholds and analysis parameters.
+- **Exception Handling**: Robust system for handling PDF-specific errors.
+- **Integrated Logging**: Configurable logging system for monitoring and debugging.
 
 ---
 
-## 5. Estrutura do Projeto 📁
+## 4. Main Technologies Used 💻
 
-A estrutura do projeto segue uma arquitetura modular bem definida:
+- **Language**: Python 3.10+
+- **PDF Processing**: PyMuPDF (Fitz) and pdfminer-six
+- **Dependency Management**: uv (Astral)
+- **Testing**: pytest
+- **Formatting and Linting**: Ruff
+- **Task Automation**: Taskipy
+
+---
+
+## 5. Project Structure 📁
+
+The project structure follows a well-defined modular architecture:
 
 ```
 pdf-manager-service/
 │
-├── .venv/              # Ambiente virtual Python
-├── data/               # Dados e arquivos de teste
-├── notebook/           # Jupyter notebooks para análises
-├── src/                # Código-fonte principal
-│   ├── boundaries/     # Camada de interface/serviços
+├── .venv/              # Python virtual environment
+├── data/               # Data and test files
+├── notebook/           # Jupyter notebooks for analysis
+├── src/                # Main source code
+│   ├── boundaries/     # Interface/services layer
 │   │   ├── pdf_service.py
 │   │   ├── pdf_image_coverage.py
 │   │   └── pdf_page_analyzer.py
-│   ├── controls/       # Camada de controle/exceções
+│   ├── controls/       # Control/exceptions layer
 │   │   └── pdf_exception.py
-│   ├── entities/       # Entidades e modelos de dados
+│   ├── entities/       # Entities and data models
 │   │   ├── dataclasses/
 │   │   │   ├── pdf_config.py
 │   │   │   ├── pdf_analysis_result.py
@@ -90,148 +92,150 @@ pdf-manager-service/
 │   │   └── enums/
 │   │       ├── pdf_type.py
 │   │       └── pdf_page_type.py
-│   └── main.py         # Exemplo de uso
-├── .gitignore          # Arquivos ignorados pelo Git
-├── .python-version     # Versão do Python
-├── pyproject.toml      # Configuração do projeto e dependências
-├── requirements.txt    # Dependências principais (para pip)
-├── requirements-dev.txt # Dependências de desenvolvimento (para pip)
-├── uv.lock             # Lock file das dependências
-├── LICENSE             # Licença do projeto
-└── README.md           # Este arquivo
+│   └── main.py         # Usage example
+├── .gitignore          # Files ignored by Git
+├── .python-version     # Python version
+├── pyproject.toml      # Project configuration and dependencies
+├── README.md           # This file (English)
+├── README_PTBR.md      # README in Portuguese
+├── requirements.txt    # Main dependencies (for pip)
+├── requirements-dev.txt # Development dependencies (for pip)
+├── uv.lock             # Dependencies lock file
+├── LICENSE             # Project license
+└── README.md           # This file
 ```
 
 ---
 
-## 6. Arquitetura 🏗️
+## 6. Architecture 🏗️
 
-O projeto segue uma **Arquitetura Limpa** com separação clara de responsabilidades:
+The project follows **Clean Architecture** with clear separation of responsibilities:
 
-### Boundaries (Fronteiras)
-- **PDFService**: Serviço principal que orquestra todas as funcionalidades
-- **PDFImageCoverage**: Analisa a cobertura de imagens em páginas
-- **PDFPageAnalyzer**: Analisa páginas individuais
+### Boundaries
+- **PDFService**: Main service that orchestrates all functionalities
+- **PDFImageCoverage**: Analyzes image coverage on pages
+- **PDFPageAnalyzer**: Analyzes individual pages
 
-### Controls (Controles)
-- **PDFException**: Exceções específicas para tratamento de erros
+### Controls
+- **PDFException**: Specific exceptions for error handling
 
-### Entities (Entidades)
-- **DataClasses**: Modelos de dados (PDFConfig, PDFAnalysisResult, PDFPageAnalysis)
-- **Enums**: Tipos enumerados (PDFType, PDFPageType)
+### Entities
+- **DataClasses**: Data models (PDFConfig, PDFAnalysisResult, PDFPageAnalysis)
+- **Enums**: Enumerated types (PDFType, PDFPageType)
 
 ---
 
-## 7. Requisitos 🔧
+## 7. Requirements 🔧
 
-- **Python 3.10** ou superior
-- **Gerenciador de Dependências** (escolha uma das opções):
-  - **uv** (Astral) - ⭐ Recomendado
-  - **pip** + venv (tradicional)
+- **Python 3.10** or higher
+- **Dependency Manager** (choose one of the options):
+  - **uv** (Astral) - ⭐ Recommended
+  - **pip** + venv (traditional)
   - **poetry** 
   - **pipenv**
 
 ---
 
-## 8. Como Executar? 🏃‍♂️
+## 8. How to Run? 🏃‍♂️
 
-Escolha uma das opções abaixo para executar o projeto:
+Choose one of the options below to run the project:
 
-> **💡 Qual método escolher?**
-> - **uv**: Mais rápido e moderno, recomendado para desenvolvimento
-> - **pip + venv**: Tradicional, funciona em qualquer ambiente Python
-> - **poetry**: Bom para projetos que já usam Poetry
-> - **pipenv**: Alternativa ao Poetry, combina pip e virtualenv
+> **💡 Which method to choose?**
+> - **uv**: Faster and modern, recommended for development
+> - **pip + venv**: Traditional, works in any Python environment
+> - **poetry**: Good for projects already using Poetry
+> - **pipenv**: Alternative to Poetry, combines pip and virtualenv
 
-### 8.1. Usando uv (Recomendado) ⭐
+### 8.1. Using uv (Recommended) ⭐
 
-#### 8.1.1. Instalação do uv
+#### 8.1.1. Installing uv
 
 ```bash
 # Windows
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
-# macOS e Linux
+# macOS and Linux
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-#### 8.1.2. Clonando e Executando
+#### 8.1.2. Cloning and Running
 
 ```bash
-# Clonar repositório
-git clone https://github.com/SeuUsuario/pdf-manager-service.git
+# Clone repository
+git clone https://github.com/YourUser/pdf-manager-service.git
 cd pdf-manager-service
 
-# Sincronizar dependências
+# Sync dependencies
 uv sync
 
-# Executar exemplo
+# Run example
 uv run python src/main.py
 ```
 
-#### 8.1.3. Comandos Úteis com uv
+#### 8.1.3. Useful Commands with uv
 
 ```bash
-# Executar testes
+# Run tests
 uv run task test
 
-# Verificar formatação
+# Check formatting
 uv run task lint
 
-# Corrigir formatação
+# Fix formatting
 uv run task format
 ```
 
-### 8.2. Usando pip + venv (Tradicional) 🐍
+### 8.2. Using pip + venv (Traditional) 🐍
 
-#### 8.2.1. Clonando e Preparando Ambiente
+#### 8.2.1. Cloning and Preparing Environment
 
 ```bash
-# Clonar repositório
-git clone https://github.com/SeuUsuario/pdf-manager-service.git
+# Clone repository
+git clone https://github.com/YourUser/pdf-manager-service.git
 cd pdf-manager-service
 
-# Criar ambiente virtual
+# Create virtual environment
 python -m venv .venv
 
-# Ativar ambiente virtual
+# Activate virtual environment
 # Windows
 .venv\Scripts\activate
 # Linux/macOS
 source .venv/bin/activate
 ```
 
-#### 8.2.2. Instalando Dependências
+#### 8.2.2. Installing Dependencies
 
 ```bash
-# Opção 1: Instalar apenas dependências principais
+# Option 1: Install only main dependencies
 pip install -r requirements.txt
 
-# Opção 2: Instalar com dependências de desenvolvimento
+# Option 2: Install with development dependencies
 pip install -r requirements-dev.txt
 
-# Opção 3: Instalar manualmente
+# Option 3: Install manually
 pip install pdfminer-six>=20250506 pymupdf>=1.26.0
 
-# Opção 4: Instalar manualmente com dependências de desenvolvimento
+# Option 4: Install manually with development dependencies
 pip install pdfminer-six>=20250506 pymupdf>=1.26.0 notebook>=7.4.3 pytest>=8.3.5 ruff>=0.11.11 taskipy>=1.14.1
 ```
 
-#### 8.2.3. Executando
+#### 8.2.3. Running
 
 ```bash
-# Executar exemplo
+# Run example
 python src/main.py
 
-# Executar testes
+# Run tests
 pytest
 
-# Verificar formatação
+# Check formatting
 ruff check .
 ```
 
-### 8.3. Usando Poetry 📝
+### 8.3. Using Poetry 📝
 
-#### 8.3.1. Instalação do Poetry
+#### 8.3.1. Installing Poetry
 
 ```bash
 # Windows (PowerShell)
@@ -241,133 +245,133 @@ ruff check .
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-#### 8.3.2. Configurando com Poetry
+#### 8.3.2. Setting up with Poetry
 
-Primeiro, crie um arquivo `pyproject.toml` compatível com Poetry ou use o existente:
+First, create a Poetry-compatible `pyproject.toml` file or use the existing one:
 
 ```bash
-# Clonar repositório
-git clone https://github.com/SeuUsuario/pdf-manager-service.git
+# Clone repository
+git clone https://github.com/YourUser/pdf-manager-service.git
 cd pdf-manager-service
 
-# Instalar dependências
+# Install dependencies
 poetry install
 
-# Ativar ambiente virtual
+# Activate virtual environment
 poetry shell
 
-# Executar exemplo
+# Run example
 poetry run python src/main.py
 ```
 
-#### 8.3.3. Comandos Úteis com Poetry
+#### 8.3.3. Useful Commands with Poetry
 
 ```bash
-# Executar testes
+# Run tests
 poetry run pytest
 
-# Verificar formatação
+# Check formatting
 poetry run ruff check .
 
-# Adicionar nova dependência
-poetry add nome-do-pacote
+# Add new dependency
+poetry add package-name
 ```
 
-### 8.4. Usando Pipenv 🧪
+### 8.4. Using Pipenv 🧪
 
-#### 8.4.1. Instalação do Pipenv
+#### 8.4.1. Installing Pipenv
 
 ```bash
 pip install pipenv
 ```
 
-#### 8.4.2. Configurando com Pipenv
+#### 8.4.2. Setting up with Pipenv
 
 ```bash
-# Clonar repositório
-git clone https://github.com/SeuUsuario/pdf-manager-service.git
+# Clone repository
+git clone https://github.com/YourUser/pdf-manager-service.git
 cd pdf-manager-service
 
-# Criar Pipfile (se não existir)
+# Create Pipfile (if it doesn't exist)
 pipenv install pdfminer-six>=20250506 pymupdf>=1.26.0
 
-# Instalar dependências de desenvolvimento
+# Install development dependencies
 pipenv install --dev notebook>=7.4.3 pytest>=8.3.5 ruff>=0.11.11 taskipy>=1.14.1
 
-# Ativar ambiente virtual
+# Activate virtual environment
 pipenv shell
 
-# Executar exemplo
+# Run example
 pipenv run python src/main.py
 ```
 
-#### 8.4.3. Comandos Úteis com Pipenv
+#### 8.4.3. Useful Commands with Pipenv
 
 ```bash
-# Executar testes
+# Run tests
 pipenv run pytest
 
-# Verificar formatação
+# Check formatting
 pipenv run ruff check .
 
-# Ver dependências
+# View dependencies
 pipenv graph
 ```
 
-### 8.5. Resumo de Comandos por Gerenciador
+### 8.5. Command Summary by Manager
 
-| Ação | uv | pip + venv | poetry | pipenv |
-|------|----|-----------| -------|--------|
-| **Instalar deps** | `uv sync` | `pip install -r requirements.txt` | `poetry install` | `pipenv install` |
-| **Executar exemplo** | `uv run python src/main.py` | `python src/main.py` | `poetry run python src/main.py` | `pipenv run python src/main.py` |
-| **Executar testes** | `uv run task test` | `pytest` | `poetry run pytest` | `pipenv run pytest` |
-| **Verificar código** | `uv run task lint` | `ruff check .` | `poetry run ruff check .` | `pipenv run ruff check .` |
+| Action | uv | pip + venv | poetry | pipenv |
+|--------|----|-----------| -------|--------|
+| **Install deps** | `uv sync` | `pip install -r requirements.txt` | `poetry install` | `pipenv install` |
+| **Run example** | `uv run python src/main.py` | `python src/main.py` | `poetry run python src/main.py` | `pipenv run python src/main.py` |
+| **Run tests** | `uv run task test` | `pytest` | `poetry run pytest` | `pipenv run pytest` |
+| **Check code** | `uv run task lint` | `ruff check .` | `poetry run ruff check .` | `pipenv run ruff check .` |
 
 ---
 
-## 9. Exemplos de Uso 💡
+## 9. Usage Examples 💡
 
-### 9.1. Uso Básico
+### 9.1. Basic Usage
 
 ```python
 from src.boundaries.pdf_service import PDFService
 from src.entities.dataclasses.pdf_config import PDFConfig
 
-# Criar configuração padrão
+# Create default configuration
 config = PDFConfig()
 
-# Inicializar serviço
+# Initialize service
 pdf_service = PDFService(config)
 
-# Detectar tipo do PDF
-pdf_type = pdf_service.detect_pdf_type("arquivo.pdf")
-print(f"Tipo do PDF: {pdf_type.value}")
+# Detect PDF type
+pdf_type = pdf_service.detect_pdf_type("file.pdf")
+print(f"PDF Type: {pdf_type.value}")
 
-# Extrair texto
-text = pdf_service.extract_pdf_text("arquivo.pdf")
-print(f"Texto extraído: {len(text)} caracteres")
+# Extract text
+text = pdf_service.extract_pdf_text("file.pdf")
+print(f"Extracted text: {len(text)} characters")
 ```
 
-### 9.2. Análise Completa
+### 9.2. Complete Analysis
 
 ```python
-# Análise detalhada do PDF
-analysis = pdf_service.analyze_pdf("arquivo.pdf")
+# Detailed PDF analysis
+analysis = pdf_service.analyze_pdf("file.pdf")
 
-print(f"Total de páginas: {analysis.total_pages}")
-print(f"Páginas de texto: {analysis.text_pages}")
-print(f"Páginas de imagem: {analysis.image_pages}")
-print(f"Tipo geral: {analysis.pdf_type.value}")
+print(f"Total pages: {analysis.total_pages}")
+print(f"Text pages: {analysis.text_pages}")
+print(f"Image pages: {analysis.image_pages}")
+print(f"General type: {analysis.pdf_type.value}")
 
-# Análise por página
+# Page-by-page analysis
 for page_analysis in analysis.pages_analysis:
-    print(f"Página {page_analysis.page_number}: {page_analysis.type.value}")
+    print(f"Page {page_analysis.page_number}: {page_analysis.type.value}")
 ```
 
-### 9.3. Configuração Personalizada
+### 9.3. Custom Configuration
 
 ```python
-# Configuração personalizada
+# Custom configuration
 config = PDFConfig(
     min_text_threshold=100,
     max_image_coverage=0.7,
@@ -379,93 +383,93 @@ pdf_service = PDFService(config)
 
 ---
 
-## 10. Configurações 🔧
+## 10. Configuration 🔧
 
-O serviço permite personalização através da classe `PDFConfig`:
+The service allows customization through the `PDFConfig` class:
 
 ```python
 @dataclass
 class PDFConfig:
-    min_text_threshold: int = 50          # Mínimo de caracteres para considerar texto
-    min_text_ratio: float = 0.1           # Razão mínima de texto
-    max_image_coverage: float = 0.6       # Cobertura máxima de imagens
-    max_default_image_area_ratio: float = 0.3  # Razão máxima de área de imagem
-    image_scale_factor: float = 0.8       # Fator de escala para imagens
+    min_text_threshold: int = 50          # Minimum characters to consider text
+    min_text_ratio: float = 0.1           # Minimum text ratio
+    max_image_coverage: float = 0.6       # Maximum image coverage
+    max_default_image_area_ratio: float = 0.3  # Maximum image area ratio
+    image_scale_factor: float = 0.8       # Image scale factor
 ```
 
 ---
 
-## 11. Testes 🧪
+## 11. Testing 🧪
 
-O projeto inclui testes automatizados com pytest:
+The project includes automated tests with pytest:
 
 ```bash
-# Executar todos os testes com coverage
+# Run all tests with coverage
 uv run task test
 
-# Executar testes específicos
+# Run specific tests
 uv run pytest tests/test_pdf_service.py
 
-# Gerar relatório de coverage em HTML
+# Generate HTML coverage report
 uv run task post_test
 ```
 
-Os relatórios de coverage são gerados na pasta `htmlcov/`.
+Coverage reports are generated in the `htmlcov/` folder.
 
 ---
 
 ## 12. TODOs 🔮
 
-- **API REST**: Criar uma API REST com FastAPI para acesso via HTTP ⚡
-- **Interface Web**: Desenvolver uma interface web para upload e análise de PDFs 🌐
-- **Processamento em Lote**: Implementar processamento de múltiplos PDFs simultaneamente 📦
-- **Cache Inteligente**: Sistema de cache para otimizar análises repetidas 🚀
-- **Suporte a OCR**: Integração com OCR para PDFs escaneados 👁️
-- **Métricas Avançadas**: Mais métricas de análise estrutural 📊
-- **Containerização**: Dockerização da aplicação 🐳
-- **CI/CD**: Pipeline de integração e deploy contínuo 🔄
+- **REST API**: Create a REST API with FastAPI for HTTP access ⚡
+- **Web Interface**: Develop a web interface for PDF upload and analysis 🌐
+- **Batch Processing**: Implement simultaneous processing of multiple PDFs 📦
+- **Smart Cache**: Cache system to optimize repeated analyses 🚀
+- **OCR Support**: Integration with OCR for scanned PDFs 👁️
+- **Advanced Metrics**: More structural analysis metrics 📊
+- **Containerization**: Docker containerization of the application 🐳
+- **CI/CD**: Continuous integration and deployment pipeline 🔄
 
 ---
 
-## 13. Licença 📄
+## 13. License 📄
 
-Este projeto está licenciado sob a Licença MIT. Para mais informações, leia o arquivo [LICENSE](LICENSE).
+This project is licensed under the MIT License. For more information, read the [LICENSE](LICENSE) file.
 
 ---
 
-## 14. Como Contribuir? 🤝
+## 14. How to Contribute? 🤝
 
-Contribuições são muito bem-vindas! Siga os passos abaixo:
+Contributions are very welcome! Follow the steps below:
 
-1. Faça um *fork* do repositório.
-2. Crie uma branch para a feature:
+1. Fork the repository.
+2. Create a branch for the feature:
    ```bash
-   git checkout -b feature/nova-feature
+   git checkout -b feature/new-feature
    ```
-3. Instale as dependências de desenvolvimento:
+3. Install development dependencies:
    ```bash
    uv sync
    ```
-4. Faça suas alterações e teste:
+4. Make your changes and test:
    ```bash
    uv run task test
    uv run task lint
    ```
-5. Faça o commit das alterações:
+5. Commit your changes:
    ```bash
-   git commit -m "feat: adiciona nova feature"
+   git commit -m "feat: add new feature"
    ```
-6. Faça o push para o seu repositório remoto:
+6. Push to your remote repository:
    ```bash
-   git push origin feature/nova-feature
+   git push origin feature/new-feature
    ```
-7. Abra um Pull Request neste repositório.
+7. Open a Pull Request in this repository.
 
 ---
 
-## 15. Autor e Contato 👤
+## 15. Author and Contact 👤
 
-- **Nome**: Bruno Tanabe
+- **Name**: Bruno Tanabe
 - **Email**: [tanabebruno@gmail.com](mailto:tanabebruno@gmail.com)
 - **LinkedIn**: [linkedin.com/in/tanabebruno](https://www.linkedin.com/in/tanabebruno/)
 - **GitHub**: [github.com/brunotanabe](https://github.com/brunotanabe)
@@ -473,4 +477,4 @@ Contribuições são muito bem-vindas! Siga os passos abaixo:
 
 ---
 
-**Desenvolvido com ❤️ e Python** 🐍
+**Developed with ❤️ and Python** 🐍
